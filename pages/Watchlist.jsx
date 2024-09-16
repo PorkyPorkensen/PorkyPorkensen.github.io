@@ -43,7 +43,7 @@ export default function Watchlist() {
                 <a href={`https://imdb.com/title/${mov.imdbID}`}>
                     <p><strong>Rating:</strong> {mov.imdbRating}</p>
                 </a>
-                <button className="remBtn" onClick={() => remMovie(mov.imdbID)}>-</button>
+                <div className="randBtn red" onClick={() => remMovie(mov.imdbID)}><i class="fa-solid fa-circle-xmark"></i><p>Remove from WL</p></div>
             </div>
         </div>
     ));
