@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { getWatchlist } from "../utilities";
 import imdbImg from "../images/IIMDB.png"
+import nfImg from "../images/nf.png"
 export default function RandomMov() {
 const [rMov, setRMov] = useState([]);
 let watchlist = getWatchlist()
@@ -32,7 +33,7 @@ let watchlist = getWatchlist()
                 <h2>{rMov.Title}</h2>
                 <br />
                 <img 
-                    src={rMov.Poster === 'N/A' ? '../images/nf.png' : rMov.Poster} 
+                    src={rMov.Poster === 'N/A' ? nfImg : rMov.Poster} 
                     alt="Random Movie Poster" 
                 />
                 <br />
