@@ -248,6 +248,11 @@ a {
         justify-content: center;
         flex-direction: row;
     }
+
+    .siteHeader h1 {
+        font-size: 40px;
+        font-weight: lighter;
+    }
 }
 
 @media (max-width: 865px) {
