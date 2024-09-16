@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getWatchlist } from "../utilities";
-
+import nfImg from "../images/nf.png"
 
 export default function Watchlist() {
     const [movieData, setMovieData] = useState([]);
@@ -30,7 +30,7 @@ export default function Watchlist() {
 
     const movElements = movieData.map(mov => (
         <div className="movDiv" key={mov.imdbID}>
-            <img src={mov.Poster === 'N/A' ? '../images/nf.png' : mov.Poster}  alt={`${mov.Title} Poster`} />
+            <img src={mov.Poster === 'N/A' ? nfImg : mov.Poster}  alt={`${mov.Title} Poster`} />
             <div className="movInfo">
                 <h1>{mov.Title}</h1>
                 <br />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { storeMovie } from "../utilities";
-
+import nfImg from "../images/nf.png"
 
 export default function HomePage() {
     const [searchTerm, setSearchTerm] = useState(""); // state to store search input
@@ -61,7 +61,7 @@ export default function HomePage() {
     const movieElements = movies.length > 0 
         ? movies.map((mov) => (
             <div className="movDiv" key={mov.imdbID}>
-                <img src={mov.Poster === 'N/A' ? '../images/nf.png' : mov.Poster}  alt={`${mov.Title} Poster`} />
+                <img src={mov.Poster === nfImg ? '../images/nf.png' : mov.Poster}  alt={`${mov.Title} Poster`} />
                 <div className="movInfo">
                     <h1>{mov.Title}</h1>
                     <br />
