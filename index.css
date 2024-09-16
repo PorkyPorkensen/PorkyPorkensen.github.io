@@ -1,0 +1,289 @@
+/* Global styles */
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    color: whitesmoke;
+    text-align: center;
+    background-position: center;
+}
+
+main {
+    padding-bottom: 5em;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* Header */
+.siteHeader {
+    float: top;
+    background-image: url(./images/bg3.jpg);
+    background-size: cover;
+    padding: 40px;
+    color: whitesmoke;
+    text-shadow: black 8px 8px 5px;
+    align-items: center;
+    justify-content: space-between;
+    height: 12.5vh;
+    border-bottom: 3px solid rgb(77, 76, 76);
+}
+
+.siteHeader h1 {
+    letter-spacing: 0.1em;
+    font-family: "Bangers", sans-serif;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    text-shadow: none;
+    font-size: 50px;
+}
+
+.siteHeader a {
+    font-size: 20px;
+}
+
+/* Search Bar */
+.search {
+    float: top;
+    display: flex;
+    position: relative;
+    top: -15px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.search input {
+    width: 33vw;
+    padding: 0.5em;
+    font-size: 20px;
+    border: 2px solid rgb(128, 126, 126);
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search button {
+    background-color: white;
+    border: 2px solid rgb(128, 126, 126);
+    border-left: 1px solid lightgray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Movie Div (movDiv) */
+.movDiv {
+    display: flex;
+    margin: 3em;
+    background-color: rgb(41, 41, 41);
+    padding: 2em;
+    align-items: center;
+    border-radius: 5px;
+    max-width: 1100px;
+}
+
+.movDiv img {
+    margin-right: 2em;
+    height: 275px;
+    border: 5px solid rgb(128, 126, 126);
+    max-width: 190px;
+}
+
+.movDiv h1 {
+    font-size: 1.75rem;
+}
+
+/* Random Title Card */
+.randTitleCard {
+    border: 3px solid rgb(128, 126, 126);
+    background-color: rgb(77, 77, 77);
+    padding: 1.75em;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 800px;
+}
+
+.randTitleCard h2 {
+    margin-top: 1em;
+}
+
+.randTitleCard img {
+    border: 4px solid rgb(128, 126, 126);
+}
+
+.randTitleCard .RDDiv {
+    margin-top: 1.25em;
+}
+
+.imdbLogo {
+    margin-top: 2em;
+    width: 111px;
+    height: 60px;
+    border: solid black 5px;
+    border-radius: 15%;
+}
+
+/* Random Screen */
+.randScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    font-size: 18px;
+}
+
+.randScreen h1 {
+    color: whitesmoke;
+}
+
+.randBtns {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.randBtn {
+    display: flex;
+    background-color: rgb(41, 41, 41);
+    padding: 1em;
+    width: 200px;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+ .randBtn.red i {
+    color: red;
+}
+.randBtn i {
+    margin-right: 1em;
+    color: lime;
+}
+
+
+/* Movie Info */
+.movInfo {
+    border: 2px solid rgb(128, 126, 126);
+    background-color: rgb(77, 77, 77);
+    padding: 1.75em;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.movInfo a {
+    text-decoration: underline;
+}
+
+/* Removal Button */
+.remBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1.5em auto 0 auto;
+    border: 2px solid rgb(128, 126, 126);
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 3em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    font-size: 150%;
+}
+
+/* Responsive Divs */
+.resDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Random Movie Display Div */
+.RDDiv {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+
+/* Default Screen */
+.defaultScreen {
+    height: 100vh;
+}
+
+/* Media Queries */
+@media (min-width: 1530px) {
+    .movDiv {
+        max-width: 600px;
+    }
+
+    .resDiv {
+        margin-top: 2em;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+     
+    .siteHeader h1 {
+        font-size: 35px;
+    }
+
+    .siteHeader a,
+    .siteHeader a:hover {
+        font-size: 16px;
+    }
+
+    .search input {
+        font-size: 14px;
+    }
+
+    .links {
+        gap: 1em;
+    }
+
+    .movDiv {
+        flex-direction: column;
+    }
+
+    .movDiv img {
+        margin-bottom: 1.5em;
+        margin-right: 0;
+    }
+
+    .randTitleCard img {
+        max-width: 250px;
+    }
+    
+    .randBtn {
+        padding: 0.5em;
+        font-size: 16px;
+    }
+    .randBtn p {
+        initial-value: '';
+    }
+    .randBtn i {
+        margin-left: 0.5em;
+    }
+    .randBtns {
+        gap: 1em;
+    }
+}

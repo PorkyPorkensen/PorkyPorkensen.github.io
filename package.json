@@ -1,0 +1,21 @@
+{
+  "name": "porks-watchlist",
+  "description": "Movie Browser and Watchlist maker",
+  "homepage": "https://porkyporkensen.github.io/PorkyPorkensen.github.io",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.4.4",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*"
+  }
+}
