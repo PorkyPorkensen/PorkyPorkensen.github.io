@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { getWatchlist } from "../utilities";
+import imdbImg from "../images/IIMDB.png"
 export default function RandomMov() {
 const [rMov, setRMov] = useState([]);
 let watchlist = getWatchlist()
+
 
     useEffect(() => {
         const randomNum = Math.floor(Math.random() * (777777 - 111161 + 1)) + 111161;
@@ -51,7 +53,7 @@ let watchlist = getWatchlist()
                     <div className="randBtn red" onClick={() =>location.reload()}><i class="fa-solid fa-rotate-right"></i><p>Not for me</p></div>
                 </div>
                 <a href={`https://www.imdb.com/title/${rMov.imdbID}`}>
-                    <img className="imdbLogo" src="../images/IIMDB.png" alt="IMDB Logo" />
+                    <img className="imdbLogo" src={imdbImg} alt="IMDB Logo" />
                 </a>
             </div>
         </div>
