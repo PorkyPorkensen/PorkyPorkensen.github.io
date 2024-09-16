@@ -71,7 +71,7 @@ export default function HomePage() {
                     </span>
                     <p>{mov.Plot}</p>
                     <br />
-                    <a href={`imdb.com/title/${mov.imdbID}`}>
+                    <a href={`https://www.imdb.com/title/${mov.imdbID}`}>
                         <p><strong>Rating:</strong> {mov.imdbRating}</p>
                     </a>
                     <div className="randBtn" onClick={() => storeMovie(mov.imdbID)}><i class="fa-solid fa-star"></i><p>Add to Watchlist</p></div>
