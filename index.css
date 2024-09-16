@@ -250,7 +250,7 @@ a {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 865px) {
      
     .siteHeader h1 {
         font-size: 40px;
