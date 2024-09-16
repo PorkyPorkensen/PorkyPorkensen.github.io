@@ -51,7 +51,7 @@ let watchlist = getWatchlist()
                 <p>Rating: {rMov.imdbRating}</p>
                 <div className="randBtns">
                     <div className="randBtn" onClick={() => storeMovie(rMov.imdbID)}><i class="fa-solid fa-star"></i><p>Add to Watchlist</p></div>
-                    <Link to="/random"><div className="randBtn red" ><i class="fa-solid fa-rotate-right"></i><p>Not for me</p></div></Link>
+                    <div className="randBtn red" onClick={() =>location.reload()}><i class="fa-solid fa-rotate-right"></i><p>Not for me</p></div>
                 </div>
                 <a href={`https://www.imdb.com/title/${rMov.imdbID}`}>
                     <img className="imdbLogo" src={imdbImg} alt="IMDB Logo" />
