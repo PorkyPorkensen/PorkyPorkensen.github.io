@@ -121,7 +121,7 @@ a {
 
 .movDiv .randBtn {
     align-self: center;
-    margin-top: 0.5em;
+    margin-top: 1em auto auto auto;
 }
 
 .imdbLogo {
