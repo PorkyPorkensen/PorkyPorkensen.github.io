@@ -124,6 +124,10 @@ a {
     margin: 1em auto auto auto;
 }
 
+.movDiv .randBtn p {
+    text-align: center;
+}
+
 .imdbLogo {
     margin-top: 2em;
     width: 111px;
