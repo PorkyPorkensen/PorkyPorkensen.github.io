@@ -40,7 +40,8 @@ a {
     margin-top: 0.25em;
     margin-bottom: 0.5em;
     text-shadow: none;
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: lighter;
 }
 
 .siteHeader a {
@@ -249,10 +250,7 @@ a {
         flex-direction: row;
     }
 
-    .siteHeader h1 {
-        font-size: 40px;
-        font-weight: lighter;
-    }
+
 }
 
 @media (max-width: 865px) {
