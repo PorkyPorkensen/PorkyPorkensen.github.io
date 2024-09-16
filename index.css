@@ -260,6 +260,7 @@ a {
     .siteHeader a,
     .siteHeader a:hover {
         font-size: 16px;
+        margin-top: 1.5em;
     }
 
     .search input {
