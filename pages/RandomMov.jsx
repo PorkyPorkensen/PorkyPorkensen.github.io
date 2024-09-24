@@ -32,7 +32,7 @@ let watchlist = getWatchlist()
     
             <article className="randTitleCard">
                 <h2>{rMov.Title}</h2>
-    
+                <br />
                 <figure>
                     <img 
                         src={rMov.Poster === 'N/A' ? nfImg : rMov.Poster} 
