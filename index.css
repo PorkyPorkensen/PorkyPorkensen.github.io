@@ -158,6 +158,7 @@ a {
 }
 
 .randBtn {
+    font-size: 1.25rem;
     display: flex;
     background-color: rgb(41, 41, 41);
     padding: 1em;
