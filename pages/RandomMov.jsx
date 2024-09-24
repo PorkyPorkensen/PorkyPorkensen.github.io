@@ -38,7 +38,6 @@ let watchlist = getWatchlist()
                         src={rMov.Poster === 'N/A' ? nfImg : rMov.Poster} 
                         alt={rMov.Poster === 'N/A' ? "Poster not available" : `${rMov.Title} Poster`} 
                     />
-                    <figcaption>{rMov.Title}</figcaption>
                 </figure>
     
                 <div className="movieDetails">

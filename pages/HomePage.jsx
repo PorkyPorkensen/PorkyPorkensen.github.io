@@ -66,7 +66,7 @@ export default function HomePage() {
                     src={mov.Poster === nfImg ? '../images/nf.png' : mov.Poster} 
                     alt={mov.Poster === nfImg ? "Poster not available" : `${mov.Title} Poster`} 
                 />
-                <figcaption>{mov.Title}</figcaption>
+
             </figure>
             <div className="movInfo">
                 <h2>{mov.Title}</h2>

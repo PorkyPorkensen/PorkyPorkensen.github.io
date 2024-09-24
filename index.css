@@ -165,6 +165,8 @@ a {
     border-radius: 20px;
     align-items: center;
     cursor: pointer;
+    border: none;
+    color: whitesmoke;
 }
 
  .randBtn.red i {
@@ -204,7 +206,7 @@ a {
 }
 
 /* Links */
-.links {
+.links ul{
     display: flex;
     justify-content: space-between;
     margin: auto 3em;
