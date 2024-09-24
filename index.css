@@ -209,11 +209,14 @@ a {
 .links ul{
     display: flex;
     justify-content: space-between;
-    margin: auto 3em;
+    margin-top: 2em;
     text-decoration: none;
     font-weight: bold;
 }
 
+.links li {
+    text-decoration: none;
+}
 .links a:hover {
     font-size: 150%;
 }

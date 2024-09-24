@@ -35,7 +35,7 @@ export default function Watchlist() {
                     src={mov.Poster === 'N/A' ? nfImg : mov.Poster} 
                     alt={mov.Poster === 'N/A' ? "Poster not available" : `${mov.Title} Poster`} 
                 />
-                <figcaption>{mov.Title}</figcaption>
+
             </figure>
             <div className="movInfo">
                 <h2>{mov.Title}</h2>
