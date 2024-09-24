@@ -55,7 +55,7 @@ let watchlist = getWatchlist()
                     <p>{rMov.Plot === 'N/A' ? 'Plot not available' : rMov.Plot}</p>
                     <p><strong>Rating:</strong> {rMov.imdbRating}</p>
                 </div>
-    
+                <br />
                 <div className="randBtns">
                     <button 
                         className="randBtn" 

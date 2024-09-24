@@ -52,6 +52,7 @@ export default function Watchlist() {
                 >
                     <p><strong>Rating:</strong> {mov.imdbRating}</p>
                 </a>
+                <br />
                 <button 
                     className="randBtn red" 
                     onClick={() => remMovie(mov.imdbID)} 
