@@ -70,6 +70,7 @@ export default function HomePage() {
             </figure>
             <div className="movInfo">
                 <h2>{mov.Title}</h2>
+                <br />
                 <div className="RDDiv">
                     <p><strong>Released:</strong> {mov.Released}</p>
                     <p><strong>Director:</strong> {mov.Director}</p>
@@ -78,6 +79,7 @@ export default function HomePage() {
                 <a href={`https://www.imdb.com/title/${mov.imdbID}`} target="_blank" rel="noopener noreferrer" aria-label={`View ${mov.Title} on IMDB`}>
                     <p><strong>Rating:</strong> {mov.imdbRating}</p>
                 </a>
+                <br />
                 <button 
                     className="randBtn" 
                     onClick={() => storeMovie(mov.imdbID)} 
