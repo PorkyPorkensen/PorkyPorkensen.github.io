@@ -29,24 +29,40 @@ export default function Watchlist() {
     }
 
     const movElements = movieData.map(mov => (
-        <div className="movDiv" key={mov.imdbID}>
-            <img src={mov.Poster === 'N/A' ? nfImg : mov.Poster}  alt={`${mov.Title} Poster`} />
+        <article className="movDiv" key={mov.imdbID}>
+            <figure>
+                <img 
+                    src={mov.Poster === 'N/A' ? nfImg : mov.Poster} 
+                    alt={mov.Poster === 'N/A' ? "Poster not available" : `${mov.Title} Poster`} 
+                />
+                <figcaption>{mov.Title}</figcaption>
+            </figure>
             <div className="movInfo">
-                <h1>{mov.Title}</h1>
-                <br />
-                <span className="RDDiv">
+                <h2>{mov.Title}</h2>
+                <div className="RDDiv">
                     <p><strong>Released:</strong> {mov.Released}</p>
                     <p><strong>Director:</strong> {mov.Director}</p>
-                </span>
+                </div>
                 <p>{mov.Plot}</p>
-                <br />
-                <a href={`https://imdb.com/title/${mov.imdbID}`}>
+                <a 
+                    href={`https://imdb.com/title/${mov.imdbID}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label={`View ${mov.Title} on IMDB`}
+                >
                     <p><strong>Rating:</strong> {mov.imdbRating}</p>
                 </a>
-                <div className="randBtn red" onClick={() => remMovie(mov.imdbID)}><i class="fa-solid fa-circle-xmark"></i><p>Remove from WL</p></div>
+                <button 
+                    className="randBtn red" 
+                    onClick={() => remMovie(mov.imdbID)} 
+                    aria-label={`Remove ${mov.Title} from Watchlist`}
+                >
+                    <i className="fa-solid fa-circle-xmark" aria-hidden="true"></i> 
+                    <span>Remove from Watchlist</span>
+                </button>
             </div>
-        </div>
+        </article>
     ));
-
-    return <div className="resDiv">{movElements}</div>;
+    
+    return <section className="resDiv">{movElements}</section>;
 }

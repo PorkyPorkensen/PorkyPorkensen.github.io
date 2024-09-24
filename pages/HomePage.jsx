@@ -59,55 +59,68 @@ export default function HomePage() {
 
     // Render detailed movie info from the state
     const movieElements = movies.length > 0 
-        ? movies.map((mov) => (
-            <div className="movDiv" key={mov.imdbID}>
-                <img src={mov.Poster === nfImg ? '../images/nf.png' : mov.Poster}  alt={`${mov.Title} Poster`} />
-                <div className="movInfo">
-                    <h1>{mov.Title}</h1>
-                    <br />
-                    <span className="RDDiv">
-                        <p><strong>Released:</strong> {mov.Released}</p>
-                        <p><strong>Director:</strong> {mov.Director}</p>
-                    </span>
-                    <p>{mov.Plot}</p>
-                    <br />
-                    <a href={`https://www.imdb.com/title/${mov.imdbID}`}>
-                        <p><strong>Rating:</strong> {mov.imdbRating}</p>
-                    </a>
-                    <div className="randBtn" onClick={() => storeMovie(mov.imdbID)}><i class="fa-solid fa-star"></i><p>Add to Watchlist</p></div>
-                </div>
-            </div>
-        ))
-        : searched 
-        ? <p>No movies found</p> 
-        : null;
-
-    return (
-        <div className="homeScreen">
-            <div className="search">
-                <input
-                    type="text"
-                    placeholder="Search for a movie!"
-                    value={searchTerm} // controlled input
-                    onChange={handleInputChange} // update state on change
+    ? movies.map((mov) => (
+        <article className="movDiv" key={mov.imdbID}>
+            <figure>
+                <img 
+                    src={mov.Poster === nfImg ? '../images/nf.png' : mov.Poster} 
+                    alt={mov.Poster === nfImg ? "Poster not available" : `${mov.Title} Poster`} 
                 />
-                <button className="searchBtn" onClick={searchMovies}>Search</button>
+                <figcaption>{mov.Title}</figcaption>
+            </figure>
+            <div className="movInfo">
+                <h2>{mov.Title}</h2>
+                <div className="RDDiv">
+                    <p><strong>Released:</strong> {mov.Released}</p>
+                    <p><strong>Director:</strong> {mov.Director}</p>
+                </div>
+                <p>{mov.Plot}</p>
+                <a href={`https://www.imdb.com/title/${mov.imdbID}`} target="_blank" rel="noopener noreferrer" aria-label={`View ${mov.Title} on IMDB`}>
+                    <p><strong>Rating:</strong> {mov.imdbRating}</p>
+                </a>
+                <button 
+                    className="randBtn" 
+                    onClick={() => storeMovie(mov.imdbID)} 
+                    aria-label={`Add ${mov.Title} to Watchlist`}
+                >
+                    <i className="fa-solid fa-star" aria-hidden="true"></i> 
+                    <span>Add to Watchlist</span>
+                </button>
             </div>
-            <div className="resDiv">
-                {/* Render only when a search is made */}
-                {searched ? (
-                    movieElements.length > 0 ? (
-                        movieElements
- 
-                    ) : (
-                        <h1>No movies found</h1>
-                    )
+        </article>
+    ))
+    : searched 
+    ? <p>No movies found</p> 
+    : null;
+
+return (
+    <section className="homeScreen">
+        <header className="search">
+            <label htmlFor="searchMovie" className="sr-only">Search for a movie</label>
+            <input
+                type="text"
+                id="searchMovie"
+                placeholder="Search for a movie!"
+                value={searchTerm} // controlled input
+                onChange={handleInputChange} // update state on change
+                aria-label="Search for a movie"
+            />
+            <button className="searchBtn" onClick={searchMovies} aria-label="Search movies">Search</button>
+        </header>
+        <div className="resDiv">
+            {/* Render only when a search is made */}
+            {searched ? (
+                movieElements.length > 0 ? (
+                    movieElements
                 ) : (
-                    <div className="defaultScreen">
-                        <h1>Please search for a movie</h1>
-                    </div>
-                )}
-            </div>
+                    <h2>No movies found</h2>
+                )
+            ) : (
+                <div className="defaultScreen">
+                    <h2>Please search for a movie</h2>
+                </div>
+            )}
         </div>
-    );
+    </section>
+);
 }
