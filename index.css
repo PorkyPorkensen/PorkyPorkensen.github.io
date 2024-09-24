@@ -217,6 +217,10 @@ a {
 .links li {
     text-decoration: none;
 }
+
+.links a {
+    text-decoration: none;
+}
 .links a:hover {
     font-size: 150%;
 }
